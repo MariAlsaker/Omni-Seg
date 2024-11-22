@@ -147,7 +147,7 @@ if __name__ == "__main__":
             data_dir = '/INPUTS/40X'
             # data_dir = '/Data2/HumanKidney/Mouse_Atubular_Segmentation/test'
             svs_folder = '/Data2/HumanKidney/2profile/circlenet/scn'
-            output_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/clinical_patches'
+            output_dir = '/Omni-Seg/Omni_seg_pipeline_gpu/clinical_patches'
             contour_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/final_merge'
         else:
             print('using local environment and gpu')
