@@ -37,30 +37,7 @@ The contribution of this paper is three-fold: <br />
 (3) superior scale-aware generalization is evidenced by directly applying a model trained on human kidney images to mouse kidney images, without retraining. 
 
 ## Quick Start
-#### Get our docker image
-
-```
-sudo docker pull lengh2/omni_seg
-```
-#### Run Omni-Seg
-You can run the following command or change the `input_dir`, then you will have the final segmentation results in `output_dir`. Please refer to "New data" section at [DEVELOP.md](https://github.com/ddrrnn123/Omni-Seg/blob/main/DEVELOP.md) for input data format requirement and data arrangement.
-```
-# you need to specify the input directory. 
-export input_dir=/home/input_dir   
-# make that directory
-sudo mkdir $input_dir
-# set output directory
-export output_dir=$input_dir/output
-#run the docker
-sudo nvidia-docker run --shm-size 64G -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS lengh2/omni_seg 
-```
-<!---
-## Google Colab (need modify)
--->
-
-
-## Installation
-Please refer to [INSTALL.md](https://github.com/ddrrnn123/Omni-Seg/blob/main/INSTALL.md) for installation instructions of the segmentation.
+Look to the original git-repo: https://github.com/MariAlsaker/Omni-Seg 
 
 ## Model
 Pretrained model can be found [here](https://github.com/ddrrnn123/Omni-Seg/tree/main/Omni_seg_pipeline_gpu/snapshots_2D)

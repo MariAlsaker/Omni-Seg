@@ -206,7 +206,7 @@ def get_arguments(img, output_folder):
 
     parser.add_argument("--snapshot_dir", type=str, default='snapshots_2D/fold1_with_white_UNet2D_ns_normalwhole_1106')
     parser.add_argument("--reload_path", type=str,
-                        default='snapshots_2D/fold1_with_white_Omni-Seg_normalwhole_1201/MOTS_DynConv_fold1_with_white_scale_psuedo_allMatching_withsemi_0.1_0.1_normalwhole_0217_e81.pth')
+                        default='/Omni-Seg/snapshots_2D/fold1_with_white_Omni-Seg_normalwhole_1201/MOTS_DynConv_fold1_with_white_UNet2D_ns_normalwhole_1106_e89.pth')
     parser.add_argument("--best_epoch", type=int, default=100)
 
     # parser.add_argument("--validsetname", type=str, default='scale')
@@ -876,7 +876,7 @@ def main(img, output_dir, case_name):
 
         edge_weight = args.edge_weight
 
-        num_worker = 8
+        num_worker = 4 # 8
 
         valloader = DataLoader(
             MOTSValDataSet_joint(args.valset_dir, args.val_list, max_iters=args.itrs_each_epoch * args.batch_size,
