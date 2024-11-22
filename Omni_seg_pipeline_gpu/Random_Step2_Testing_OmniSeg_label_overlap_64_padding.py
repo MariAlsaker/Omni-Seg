@@ -54,7 +54,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 from util.image_pool import ImagePool
 
-from unet2D_Dodnet_scale import UNet2D as unet2D_scale
+from unet2D_ns import UNet2D as unet2D_scale
 
 import torch.multiprocessing as mp
 
@@ -1034,11 +1034,11 @@ def natural_keys(text):
 
 if __name__ == '__main__':
 
-    docker = 0
+    docker = 1
 
     if docker:
-        data_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/clinical_patches/'
-        output_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/segmentation_merge/'
+        data_dir = '/Omni-Seg/Omni_seg_pipeline_gpy/clinical_patches/'
+        output_dir = '/Omni-Seg/Omni_seg_pipeline_gpy/segmentation_merge/'
     else:
         data_dir = '/home/lengh2/Desktop/Haoju_Leng/DockerFiles/test/src/extra/OmniSeg_MouthKidney_Pipeline/clinical_patches/'
         output_dir = '/home/lengh2/Desktop/Haoju_Leng/DockerFiles/test/src/extra/OmniSeg_MouthKidney_Pipeline/segmentation_merge/'

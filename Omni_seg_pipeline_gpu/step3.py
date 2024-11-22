@@ -776,10 +776,10 @@ if __name__ == "__main__":
     contour_map = 0
     slice_map = 1
     slice_map_mapping = 0
-    docker = 0
+    docker = 1
 
     if docker:
-        output_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/segmentation_merge'
+        output_dir = '/Omni-Seg/Omni_seg_pipeline_gpy/segmentation_merge'
         # big_slice_folder = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/V11M25-279/20X'
         #big_slice_folder = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/svs_input/40X'
         big_slice_folder = '/INPUTS/40X'

@@ -135,7 +135,7 @@ def get_seg_mask(region_size, scale, contours_tissue, holes_tissue, use_holes=Fa
 
 if __name__ == "__main__":
 
-    docker = 0
+    docker = 1
     gpu = 1
 
     start = timeit.default_timer()
@@ -146,9 +146,9 @@ if __name__ == "__main__":
             #data_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/svs_input/40X'
             data_dir = '/INPUTS/40X'
             # data_dir = '/Data2/HumanKidney/Mouse_Atubular_Segmentation/test'
-            svs_folder = '/Data2/HumanKidney/2profile/circlenet/scn'
+            svs_folder = '/Data2/HumanKidney/2profile/circlenet/scn' # not used
             output_dir = '/Omni-Seg/Omni_seg_pipeline_gpu/clinical_patches'
-            contour_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/final_merge'
+            contour_dir = '/Omni-Seg/Omni_seg_pipeline_gpu/final_merge'
         else:
             print('using local environment and gpu')
             # data_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/V11M25-279/20X'

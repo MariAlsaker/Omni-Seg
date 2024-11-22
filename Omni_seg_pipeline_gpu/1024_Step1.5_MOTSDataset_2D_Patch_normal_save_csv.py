@@ -564,11 +564,11 @@ def my_collate(batch):
 
 if __name__ == '__main__':
 
-    docker = 0
+    docker = 1
 
     if docker:
-        trainset_dir = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/clinical_patches'
-        train_list = '/desktop/src/extra/OmniSeg_MouthKidney_Pipeline/clinical_patches'
+        trainset_dir = 'Omni-Seg/Omni_seg_pipeline_gpu/clinical_patches'
+        train_list = 'Omni-Seg/Omni_seg_pipeline_gpu/clinical_patches'
     else:
         trainset_dir = '/home/lengh2/Desktop/Haoju_Leng/DockerFiles/test/src/extra/OmniSeg_MouthKidney_Pipeline/clinical_patches'
         train_list = '/home/lengh2/Desktop/Haoju_Leng/DockerFiles/test/src/extra/OmniSeg_MouthKidney_Pipeline/clinical_patches'
