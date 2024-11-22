@@ -6,6 +6,7 @@ import torch
 import numpy as np
 from torch.autograd import Variable
 import matplotlib.pyplot as plt
+
 affine_par = True
 import functools
 
@@ -124,7 +125,10 @@ class unet2D(nn.Module):
             nn.ReLU(inplace=in_place),
             torch.nn.AdaptiveAvgPool2d((1,1))
         )
+
         self.controller = nn.Conv2d(256+6, 162, kernel_size=1, stride=1, padding=0)   #### change the channel
+
+
 
     def _make_layer(self, block, inplanes, planes, blocks, stride=(1, 1), dilation=1, multi_grid=1):
         downsample = None
@@ -155,6 +159,14 @@ class unet2D(nn.Module):
         for i in range(N):
             task_encoding[i, task_id[i].long()]=1
         return task_encoding.cuda()
+    
+
+
+    # Other models have encoding_scale function here
+
+
+
+
 
     def parse_dynamic_params(self, params, channels, weight_nums, bias_nums):
         assert params.dim() == 2
@@ -218,10 +230,34 @@ class unet2D(nn.Module):
         task_encoding = self.encoding_task(task_id)
         # print(task_id)
         task_encoding.unsqueeze_(2).unsqueeze_(2)#.unsqueeze_(2)
+
+
+
+
+
+
         x_feat = self.GAP(x)
         x_cond = torch.cat([x_feat, task_encoding], 1)
+
+
+
+
+
+
+
+
+
+
+
         params = self.controller(x_cond)
         params.squeeze_(-1).squeeze_(-1)#.squeeze_(-1)
+
+
+
+
+
+
+
 
         # x8
         x = self.upsamplex2(x)
@@ -245,6 +281,8 @@ class unet2D(nn.Module):
 
         head_inputs = self.precls_conv(x)
 
+
+
         N, _, H, W = head_inputs.size()
         head_inputs = head_inputs.reshape(1, -1, H, W)
 
@@ -255,6 +293,7 @@ class unet2D(nn.Module):
         bias_nums.append(8)
         bias_nums.append(8)
         bias_nums.append(2)
+        
         weights, biases = self.parse_dynamic_params(params, 8, weight_nums, bias_nums)
 
         logits = self.heads_forward(head_inputs, weights, biases, N)
