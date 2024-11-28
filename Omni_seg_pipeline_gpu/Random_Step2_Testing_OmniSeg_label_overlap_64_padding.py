@@ -2,7 +2,7 @@ import argparse
 import os, sys
 import pandas as pd
 
-sys.path.append("/Data/DoDNet/")
+sys.path.append("/Omni-Seg/Omni_seg_pipeline_gpu/apex")
 from skimage.transform import rescale, resize
 import glob
 import torch
