@@ -1,3 +1,4 @@
+#!/bin/bash
 # Docker command for the old docker lengh2/Omni_seg:
 # docker run -shm-size 64G -it -rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS lengh2/omni_seg
 
