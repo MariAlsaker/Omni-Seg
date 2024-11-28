@@ -37,7 +37,7 @@ The contribution of this paper is three-fold: <br />
 (3) superior scale-aware generalization is evidenced by directly applying a model trained on human kidney images to mouse kidney images, without retraining. 
 
 ## Quick Start
-Look to the original git-repo: https://github.com/MariAlsaker/Omni-Seg 
+Look to the original git-repo: https://github.com/ddrrnn123/Omni-Seg 
 
 ## Model
 Pretrained model can be found [here](https://github.com/ddrrnn123/Omni-Seg/tree/main/Omni_seg_pipeline_gpu/snapshots_2D)
@@ -50,7 +50,7 @@ The example dataset for the pipeline which contains a .SVS input file and three 
 ## Omni-Seg - Region Image Demo
 Omni-Seg can easily be run on a single image.
 
-Look to the original git-repo: https://github.com/MariAlsaker/Omni-Seg 
+Look to the original git-repo: https://github.com/ddrrnn123/Omni-Seg 
 
 ## Omni-Seg - Whole Slide Image - data preparation
 CircleNet can also be run on Whole Slide Images in *.svs file format.
