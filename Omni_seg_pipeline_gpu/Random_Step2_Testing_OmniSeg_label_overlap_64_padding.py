@@ -206,7 +206,7 @@ def get_arguments(img, output_folder):
 
     parser.add_argument("--snapshot_dir", type=str, default='snapshots_2D/fold1_with_white_UNet2D_ns_normalwhole_1106')
     parser.add_argument("--reload_path", type=str,
-                        default='/Omni-Seg/snapshots_2D/fold1_with_white_Omni-Seg_normalwhole_1201/MOTS_DynConv_fold1_with_white_UNet2D_ns_normalwhole_1106_e89.pth')
+                        default='/Omni-Seg/Omni_seg_pipeline_gpu/snapshots_2D/fold1_with_white_Omni-Seg_normalwhole_1201/MOTS_DynConv_fold1_with_white_UNet2D_ns_normalwhole_1106_e89.pth')
     parser.add_argument("--best_epoch", type=int, default=100)
 
     # parser.add_argument("--validsetname", type=str, default='scale')
@@ -1037,8 +1037,8 @@ if __name__ == '__main__':
     docker = 1
 
     if docker:
-        data_dir = '/Omni-Seg/Omni_seg_pipeline_gpy/clinical_patches/'
-        output_dir = '/Omni-Seg/Omni_seg_pipeline_gpy/segmentation_merge/'
+        data_dir = '/Omni-Seg/Omni_seg_pipeline_gpu/clinical_patches/'
+        output_dir = '/Omni-Seg/Omni_seg_pipeline_gpu/segmentation_merge/'
     else:
         data_dir = '/home/lengh2/Desktop/Haoju_Leng/DockerFiles/test/src/extra/OmniSeg_MouthKidney_Pipeline/clinical_patches/'
         output_dir = '/home/lengh2/Desktop/Haoju_Leng/DockerFiles/test/src/extra/OmniSeg_MouthKidney_Pipeline/segmentation_merge/'
