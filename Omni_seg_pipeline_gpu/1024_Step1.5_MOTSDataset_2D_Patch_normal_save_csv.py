@@ -586,7 +586,7 @@ if __name__ == '__main__':
 
     trainloader = DataLoader(
         MOTSDataSet(trainset_dir, train_list, max_iters=itrs_each_epoch * batch_size,
-                    crop_size=input_size, scale=random_scale, mirror=random_mirror),batch_size = 1, shuffle = False, num_workers = 8)
+                    crop_size=input_size, scale=random_scale, mirror=random_mirror),batch_size = 1, shuffle = False, num_workers = 4)
 
     for iter, batch in enumerate(trainloader):
         print(iter)
