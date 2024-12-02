@@ -300,7 +300,7 @@ class unet2D(nn.Module):
 
         logits = logits.reshape(-1, 2, H, W)
 
-        return logits, x_feat
+        return logits #, x_feat
 
 def UNet2D(num_classes=1, weight_std=False):
     print("Using DynConv 8,8,2")
